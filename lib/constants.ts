@@ -193,10 +193,10 @@ export const CTA = {
 export const FOOTER = {
   wordmark: "UDUAK.",
   socials: [
-    { label: "LinkedIn", href: "https://linkedin.com/in/godbless-uduak" },
-    { label: "Dribbble", href: "#" },
-    { label: "GitHub", href: "#" },
-    { label: "Instagram", href: "#" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/godbless-uduak-9585492a3" },
+    { label: "Dribbble", href: "https://dribbble.com/Godblessdgreat" },
+    { label: "GitHub", href: "https://github.com/Godblessdgreat" },
+    { label: "Instagram", href: "https://www.instagram.com/godblessdgreat/" },
   ],
   copyright: "© 2026 Godbless Uduak. All rights reserved.",
   tagline: "Built with AI & Intentionality.",
