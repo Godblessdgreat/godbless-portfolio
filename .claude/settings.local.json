@@ -1,7 +1,29 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --use-npm --no-src-dir --import-alias \"@/*\" --yes)"
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --use-npm --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npm install *)",
+      "Bash(npx --yes shadcn@latest init --help)",
+      "Bash(npx --yes shadcn@latest init --defaults --force)",
+      "Bash(curl -I https://ui.shadcn.com/)",
+      "Bash(npx --yes shadcn@latest add sheet --yes)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /tmp/portfolio-home.html -w \"HTTP_STATUS:%{http_code}\\\\n\" http://localhost:3000/)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /dev/null -w \"HTTP_STATUS:%{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /tmp/portfolio.html -w \"HTTP_STATUS:%{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(grep -oE \"Let[^<]{0,15}\" /tmp/portfolio.html)",
+      "Bash(npx tsc *)",
+      "Bash(curl -s -o /tmp/p.html -w \"HTTP:%{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3000/ > /tmp/p.html && sleep 2 && tail -25 \"C:\\\\Users\\\\geeja\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-geeja-Desktop-godbless-portfolio\\\\4340fa34-18e0-4006-b119-f03ee2fcb0c5\\\\tasks\\\\btl17t1yy.output\")",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"HTTP:%{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"logo-dark: %{http_code}\\\\n\" http://localhost:3000/geestech-logo-dark.jpg)",
+      "Bash(curl -s -o /dev/null -w \"logo-light: %{http_code}\\\\n\" http://localhost:3000/geestech-logo-light.jpg)",
+      "Bash(curl -s -o /dev/null -w \"portrait: %{http_code}\\\\n\" http://localhost:3000/portrait-illustrated.jpg)"
+    ],
+    "additionalDirectories": [
+      "\\tmp"
     ]
   }
 }
