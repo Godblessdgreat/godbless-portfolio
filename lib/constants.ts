@@ -92,7 +92,7 @@ export const WORK = {
       tags: ["AI WEB DEV", "HOSPITALITY"],
       title: "Mayoral Hotels & Suites",
       image: "/work/mayoral.jpg",
-      liveUrl: "",
+      liveUrl: "https://mayoral-hotel-suites.vercel.app",
       status: "live",
     },
     {
