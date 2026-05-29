@@ -39,13 +39,7 @@ export function Cta() {
           variants={fadeUp}
           className="font-display text-[44px] font-bold leading-[1.0] tracking-tight text-text-primary text-balance sm:text-[56px] md:text-[72px] lg:text-[88px] xl:text-[112px]"
         >
-          {CTA.headline.line1}
-          <br />
-          <span className="font-serif font-normal italic text-accent">
-            {CTA.headline.accent}
-          </span>
-          <br />
-          {CTA.headline.line2}
+          {CTA.headline.line1}{" "}<span className="font-serif font-normal italic text-accent">{CTA.headline.accent}</span>{" "}{CTA.headline.line2}
         </motion.h2>
 
         <motion.p

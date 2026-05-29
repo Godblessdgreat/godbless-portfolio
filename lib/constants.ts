@@ -76,7 +76,7 @@ export const EXPERIENCE = {
 
 export const WORK = {
   heading: { text: "Selected ", accent: "Work" },
-  viewAll: "See all projects",
+  viewAll: "(2025 — 2026)",
   featured: {
     slug: "space-and-time",
     tags: ["AI WEB DEV", "2025"],

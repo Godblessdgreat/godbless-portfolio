@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import { Reveal, fadeUp, stagger } from "@/components/motion/reveal";
 import { cn } from "@/lib/utils";
@@ -191,19 +191,12 @@ export function Work() {
               {WORK.heading.accent}
             </span>
           </motion.h2>
-          <motion.a
+          <motion.span
             variants={fadeUp}
-            href="#"
-            aria-label={`${WORK.viewAll} (coming soon)`}
-            className="group inline-flex items-center gap-2 text-sm font-medium text-text-primary transition-opacity hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg md:self-end"
+            className="font-display text-sm font-medium uppercase tracking-[0.1em] text-text-secondary md:self-end"
           >
             {WORK.viewAll}
-            <ArrowRight
-              size={16}
-              aria-hidden="true"
-              className="text-accent transition-transform duration-200 ease-out group-hover:translate-x-1"
-            />
-          </motion.a>
+          </motion.span>
         </Reveal>
 
         <Reveal variants={stagger} className="mt-16 md:mt-20">
