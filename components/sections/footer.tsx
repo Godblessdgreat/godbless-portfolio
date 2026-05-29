@@ -23,7 +23,7 @@ function FooterLink({ href, label }: { href: string; label: string }) {
   );
 }
 
-export function Footer() {
+export function Footer({ wordmark = FOOTER.wordmark }: { wordmark?: string } = {}) {
   return (
     <footer className="border-t border-border">
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-16 md:py-20">
@@ -33,7 +33,7 @@ export function Footer() {
             className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between md:gap-12"
           >
             <span className="font-display text-[56px] font-bold leading-none tracking-tight text-text-primary md:text-[88px] lg:text-[120px] xl:text-[160px]">
-              {FOOTER.wordmark}
+              {wordmark}
             </span>
 
             <nav

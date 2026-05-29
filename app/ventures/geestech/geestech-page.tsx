@@ -16,6 +16,7 @@ import {
 
 import { Reveal, fadeUp, stagger } from "@/components/motion/reveal";
 import { Footer } from "@/components/sections/footer";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { GEESTECH } from "@/lib/constants";
 
 function useCopy() {
@@ -49,7 +50,7 @@ export function GeestechPage() {
 
   return (
     <>
-      <div className="mx-auto max-w-7xl px-6 pt-24 md:px-16 md:pt-28">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 pt-24 md:px-16 md:pt-28">
         <Link
           href="/"
           className="group inline-flex items-center gap-2 text-sm text-text-secondary transition-colors hover:text-text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
@@ -61,6 +62,7 @@ export function GeestechPage() {
           />
           Back to portfolio
         </Link>
+        <ThemeToggle />
       </div>
 
       <main>
@@ -324,46 +326,6 @@ export function GeestechPage() {
           </div>
         </section>
 
-        {/* TEAM */}
-        <section className="border-t border-border">
-          <div className="mx-auto max-w-7xl px-6 py-24 md:px-16 md:py-32">
-            <Reveal variants={stagger} className="mb-12 md:mb-16">
-              <motion.h2
-                variants={fadeUp}
-                className="max-w-5xl font-display text-[40px] font-bold leading-[1.05] tracking-tight text-text-primary text-balance sm:text-[44px] md:text-[56px] lg:text-[64px] xl:text-[72px]"
-              >
-                {GEESTECH.team.heading.lead}
-                <span className="font-serif font-normal italic text-accent">
-                  {GEESTECH.team.heading.accent}
-                </span>
-                {GEESTECH.team.heading.tail}
-              </motion.h2>
-            </Reveal>
-            <Reveal
-              variants={stagger}
-              className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-10"
-            >
-              {GEESTECH.team.members.map((member) => (
-                <motion.article
-                  key={member.name}
-                  variants={fadeUp}
-                  className="flex flex-col gap-4 rounded-2xl border border-border bg-surface p-8 md:p-10"
-                >
-                  <span className="text-[11px] font-medium uppercase tracking-[0.1em] text-text-secondary">
-                    {member.role}
-                  </span>
-                  <h3 className="font-display text-2xl font-bold tracking-tight text-text-primary md:text-[28px]">
-                    {member.name}
-                  </h3>
-                  <p className="text-base leading-relaxed text-text-secondary md:text-lg">
-                    {member.bio}
-                  </p>
-                </motion.article>
-              ))}
-            </Reveal>
-          </div>
-        </section>
-
         {/* CONTACT CTA */}
         <section id="contact" className="border-t border-border">
           <Reveal
@@ -435,7 +397,7 @@ export function GeestechPage() {
         </section>
       </main>
 
-      <Footer />
+      <Footer wordmark="GEE'STECH." />
     </>
   );
 }
