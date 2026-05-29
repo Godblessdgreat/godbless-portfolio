@@ -64,7 +64,7 @@ export function Hero() {
 
         <motion.h1
           variants={fadeUp}
-          className="font-display text-[44px] font-extrabold leading-[1.02] tracking-tight text-text-primary text-balance sm:text-[56px] md:text-[72px] lg:text-[88px] xl:text-[112px]"
+          className="font-display text-[44px] font-bold leading-[1.02] tracking-tight text-text-primary text-balance sm:text-[56px] md:text-[72px] lg:text-[88px] xl:text-[112px]"
         >
           {HERO.headline.line1}{" "}<span className="font-serif font-normal italic text-accent">{HERO.headline.connector}</span>{" "}{HERO.headline.line2}
         </motion.h1>

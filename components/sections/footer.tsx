@@ -32,7 +32,7 @@ export function Footer() {
             variants={fadeUp}
             className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between md:gap-12"
           >
-            <span className="font-display text-[56px] font-extrabold leading-none tracking-tight text-text-primary md:text-[88px] lg:text-[120px] xl:text-[160px]">
+            <span className="font-display text-[56px] font-bold leading-none tracking-tight text-text-primary md:text-[88px] lg:text-[120px] xl:text-[160px]">
               {FOOTER.wordmark}
             </span>
 

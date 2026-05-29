@@ -82,14 +82,14 @@ import { useTheme } from 'next-themes';
 ```tsx
 // app/layout.tsx
 import type { Metadata } from 'next';
-import { Inter_Tight, Instrument_Serif, Inter } from 'next/font/google';
+import { Space_Grotesk, Instrument_Serif, Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { LenisProvider } from '@/components/lenis-provider';
 import './globals.css';
 
-const displaySans = Inter_Tight({
+const displaySans = Space_Grotesk({
   subsets: ['latin'],
-  weight: ['700', '800'],
+  weight: ['500', '600', '700'],
   variable: '--font-display',
   display: 'swap',
 });

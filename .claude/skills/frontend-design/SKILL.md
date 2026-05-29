@@ -53,11 +53,11 @@ DO NOT use the accent for primary buttons elsewhere, large fills, body text, or 
 ### Fonts (loaded via next/font/google)
 
 ```ts
-import { Inter_Tight, Instrument_Serif, Inter } from 'next/font/google';
+import { Space_Grotesk, Instrument_Serif, Inter } from 'next/font/google';
 
-const displaySans = Inter_Tight({
+const displaySans = Space_Grotesk({
   subsets: ['latin'],
-  weight: ['700', '800'],
+  weight: ['500', '600', '700'],
   variable: '--font-display',
   display: 'swap',
 });
@@ -82,11 +82,11 @@ const bodySans = Inter({
 
 | Use case | Size | Weight | Font |
 |----------|------|--------|------|
-| Hero headline | 120-160px | 800 | Inter Tight |
-| Section heading | 64-96px | 700 | Inter Tight |
-| CTA mega-headline | 120px | 700 | Inter Tight |
-| Card title (featured work) | 56-72px | 700 | Inter Tight |
-| Card title (standard) | 20-28px | 700 | Inter Tight |
+| Hero headline | 120-160px | 700 | Space Grotesk |
+| Section heading | 64-96px | 700 | Space Grotesk |
+| CTA mega-headline | 120px | 700 | Space Grotesk |
+| Card title (featured work) | 56-72px | 700 | Space Grotesk |
+| Card title (standard) | 20-28px | 700 | Space Grotesk |
 | Body large | 18px | 400 | Inter |
 | Body | 16px | 400 | Inter |
 | Eyebrow / label | 12px uppercase, 0.1em tracking | 500 | Inter |
