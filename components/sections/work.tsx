@@ -134,12 +134,12 @@ function WorkCard({
       >
         {project.title}
       </h3>
-      {featured && project.description && (
+      {project.description && (
         <p className="max-w-2xl text-base leading-relaxed text-text-secondary md:text-lg">
           {project.description}
         </p>
       )}
-      {featured && isLinked && (
+      {isLinked && (
         <span className="mt-2 inline-flex items-center gap-2 text-sm font-medium text-text-primary">
           View project
           <ArrowUpRight

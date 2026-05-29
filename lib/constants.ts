@@ -151,6 +151,7 @@ export const ABOUT = {
     "I'm a product designer and AI web developer based in Lagos. I've been designing interfaces for over two years across fintech and SaaS, and in 2026 I went all-in on building with AI tools like Lovable, Cursor, and Claude.",
     "Before design, I built a six-year track record in IT support. That knowledge still shapes how I think about systems, users, and what actually breaks in production. I also run Gee'stech, my IT services brand based in Lagos.",
     "When I'm not designing or building, I'm thinking about ways to help Nigerian creators and founders ship faster with AI.",
+    "I'm eager about AI and currently learning prompt engineering, AI systems, and how to build with the next wave of tools — through Oracle's Foundations of Artificial Intelligence programme and hands-on shipping.",
   ],
 } as const;
 

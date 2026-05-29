@@ -25,10 +25,12 @@ export function Ventures() {
 
   // Default to the dark-mode (light-text) logo until hydration resolves the
   // theme; defaultTheme is "dark" so this matches the initial SSR paint.
-  const logoSrc =
-    isHydrated && resolvedTheme === "light"
-      ? VENTURES.card.logo
-      : VENTURES.card.logoLight;
+  const isLight = isHydrated && resolvedTheme === "light";
+  const logoSrc = isLight ? VENTURES.card.logo : VENTURES.card.logoLight;
+  // Workaround: JPGs carry a baked-in white background. Brightness(0) forces
+  // the artwork to a single channel; invert flips it for dark mode. Replace
+  // with an SVG and drop this once one is available.
+  const logoFilter = isLight ? "brightness(0)" : "brightness(0) invert(1)";
 
   return (
     <section
@@ -73,6 +75,7 @@ export function Ventures() {
                     width={240}
                     height={64}
                     className="h-auto w-auto max-h-16"
+                    style={{ filter: logoFilter }}
                   />
                 </div>
                 <p className="text-base font-medium text-text-secondary md:text-lg">
