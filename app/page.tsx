@@ -6,6 +6,7 @@ import { Experience } from "@/components/sections/experience";
 import { Work } from "@/components/sections/work";
 import { Process } from "@/components/sections/process";
 import { About } from "@/components/sections/about";
+import { Tools } from "@/components/sections/tools";
 import { Ventures } from "@/components/sections/ventures";
 import { Cta } from "@/components/sections/cta";
 import { Footer } from "@/components/sections/footer";
@@ -21,6 +22,7 @@ export default function Home() {
         <Experience />
         <Work />
         <About />
+        <Tools />
         <Process />
         <Ventures />
         <Cta />

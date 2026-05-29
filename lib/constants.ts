@@ -14,6 +14,7 @@ export const NAV = {
   links: [
     { label: "Work", href: "#work" },
     { label: "About", href: "#about" },
+    { label: "Tools", href: "#tools" },
     { label: "Process", href: "#process" },
     { label: "Ventures", href: "#ventures" },
   ],
@@ -105,6 +106,35 @@ export const WORK = {
     },
   ],
 } as const;
+
+type ToolItem = {
+  name: string;
+  slug: string | null;
+  label?: string;
+};
+
+const TOOLS_ITEMS: readonly ToolItem[] = [
+  { name: "Figma", slug: "figma" },
+  { name: "Stitch", slug: null, label: "Stitch" },
+  { name: "Next.js", slug: "nextdotjs" },
+  { name: "TypeScript", slug: "typescript" },
+  { name: "Tailwind CSS", slug: "tailwindcss" },
+  { name: "Vercel", slug: "vercel" },
+  { name: "GitHub", slug: "github" },
+  { name: "VS Code", slug: "visualstudiocode" },
+  { name: "Claude", slug: "claude" },
+  { name: "Cursor", slug: "cursor" },
+  { name: "Lovable", slug: null, label: "Lovable" },
+  { name: "ChatGPT", slug: "openai" },
+];
+
+export const TOOLS = {
+  eyebrow: "TOOLS I USE",
+  heading: { text: "The stack I ", accent: "build", tail: " with." },
+  subhead:
+    "A mix of design, development, and AI tools — refined to ship faster without sacrificing craft.",
+  items: TOOLS_ITEMS,
+};
 
 export const PROCESS = {
   eyebrow: "PROCESS",
