@@ -27,10 +27,10 @@ export function Ventures() {
   // theme; defaultTheme is "dark" so this matches the initial SSR paint.
   const isLight = isHydrated && resolvedTheme === "light";
   const logoSrc = isLight ? VENTURES.card.logo : VENTURES.card.logoLight;
-  // Workaround: JPGs carry a baked-in white background. Brightness(0) forces
-  // the artwork to a single channel; invert flips it for dark mode. Replace
-  // with an SVG and drop this once one is available.
-  const logoFilter = isLight ? "brightness(0)" : "brightness(0) invert(1)";
+  // Workaround: the JPGs carry a baked-in rectangular background. multiply
+  // makes white pixels blend away on the light card; screen makes black
+  // pixels blend away on the dark card. Replace with SVGs to drop this.
+  const logoBlend = isLight ? "multiply" : "screen";
 
   return (
     <section
@@ -71,11 +71,11 @@ export function Ventures() {
                 <div className="flex h-20 items-center md:h-24">
                   <Image
                     src={logoSrc}
-                    alt={VENTURES.card.logoText}
-                    width={240}
-                    height={64}
+                    alt="Gee'stech logo"
+                    width={200}
+                    height={80}
                     className="h-auto w-auto max-h-16"
-                    style={{ filter: logoFilter }}
+                    style={{ mixBlendMode: logoBlend }}
                   />
                 </div>
                 <p className="text-base font-medium text-text-secondary md:text-lg">
