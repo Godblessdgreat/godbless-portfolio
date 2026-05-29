@@ -3,15 +3,32 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useSyncExternalStore } from "react";
 
 import { Reveal, fadeUp, stagger } from "@/components/motion/reveal";
 import { VENTURES } from "@/lib/constants";
 
-const HAS_LOGOS = true;
+const subscribe = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
+
+function useIsHydrated() {
+  return useSyncExternalStore(subscribe, getClientSnapshot, getServerSnapshot);
+}
 
 export function Ventures() {
+  const isHydrated = useIsHydrated();
+  const { resolvedTheme } = useTheme();
   const ctaHref = VENTURES.card.cta.href;
   const isExternal = ctaHref.startsWith("http");
+
+  // Default to the dark-mode (light-text) logo until hydration resolves the
+  // theme; defaultTheme is "dark" so this matches the initial SSR paint.
+  const logoSrc =
+    isHydrated && resolvedTheme === "light"
+      ? VENTURES.card.logo
+      : VENTURES.card.logoLight;
 
   return (
     <section
@@ -50,30 +67,13 @@ export function Ventures() {
             <div className="flex flex-col gap-10 md:flex-row md:items-center md:gap-12 lg:gap-16">
               <div className="flex flex-col gap-4 md:w-2/5">
                 <div className="flex h-20 items-center md:h-24">
-                  {HAS_LOGOS ? (
-                    <>
-                      {/* Light-text logo for dark mode */}
-                      <Image
-                        src={VENTURES.card.logoLight}
-                        alt={VENTURES.card.logoText}
-                        width={240}
-                        height={64}
-                        className="hidden h-auto w-auto max-h-16 dark:block"
-                      />
-                      {/* Dark-text logo for light mode */}
-                      <Image
-                        src={VENTURES.card.logo}
-                        alt={VENTURES.card.logoText}
-                        width={240}
-                        height={64}
-                        className="block h-auto w-auto max-h-16 dark:hidden"
-                      />
-                    </>
-                  ) : (
-                    <span className="font-display text-3xl font-extrabold tracking-tight text-text-primary md:text-[40px]">
-                      {VENTURES.card.logoText}
-                    </span>
-                  )}
+                  <Image
+                    src={logoSrc}
+                    alt={VENTURES.card.logoText}
+                    width={240}
+                    height={64}
+                    className="h-auto w-auto max-h-16"
+                  />
                 </div>
                 <p className="text-base font-medium text-text-secondary md:text-lg">
                   {VENTURES.card.tagline}
