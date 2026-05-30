@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
@@ -56,7 +57,10 @@ function WorkCard({
   featured?: boolean;
 }) {
   const isComingSoon = project.status === "coming-soon";
-  const isLinked = !!project.liveUrl && !isComingSoon;
+  // Every card now routes to its case study page. Coming-soon cards still
+  // navigate (case study can describe the unreleased work) but skip the
+  // hover-glow + "View project" badge to read as a quieter state.
+  const isInteractive = !isComingSoon;
   const hasImage = IMAGES_AVAILABLE.has(project.slug);
 
   const visual = (
@@ -66,7 +70,7 @@ function WorkCard({
         isComingSoon
           ? "border-dashed border-border opacity-60"
           : "border-border",
-        isLinked &&
+        isInteractive &&
           "group-hover:border-accent/30 group-hover:shadow-[0_0_30px_-10px_rgba(29,161,242,0.25)]",
       )}
     >
@@ -84,7 +88,7 @@ function WorkCard({
               fill
               className={cn(
                 "object-cover",
-                isLinked &&
+                isInteractive &&
                   "transition-transform duration-[400ms] ease-out group-hover:scale-105",
               )}
               sizes={
@@ -139,7 +143,7 @@ function WorkCard({
           {project.description}
         </p>
       )}
-      {isLinked && (
+      {isInteractive && (
         <span className="mt-2 inline-flex items-center gap-2 text-sm font-medium text-text-primary">
           View project
           <ArrowUpRight
@@ -152,25 +156,14 @@ function WorkCard({
     </div>
   );
 
-  if (isLinked) {
-    return (
-      <a
-        href={project.liveUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-bg"
-      >
-        {visual}
-        {metadata}
-      </a>
-    );
-  }
-
   return (
-    <div className="group">
+    <Link
+      href={`/work/${project.slug}`}
+      className="group block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-bg"
+    >
       {visual}
       {metadata}
-    </div>
+    </Link>
   );
 }
 
