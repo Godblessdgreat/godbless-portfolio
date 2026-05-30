@@ -27,12 +27,12 @@ const bodySans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Godbless Uduak — AI Web Developer & Product Designer",
+  title: "Godbless Uduak, AI Web Developer & Product Designer",
   description:
-    "I design and build digital products that ship — faster, sharper, beautifully crafted with modern AI tools.",
+    "I design and build digital products that ship, faster, sharper, beautifully crafted with modern AI tools.",
   metadataBase: new URL("https://godbless-portfolio.vercel.app"),
   openGraph: {
-    title: "Godbless Uduak — AI Web Developer & Product Designer",
+    title: "Godbless Uduak, AI Web Developer & Product Designer",
     description:
       "Lagos-based product designer and AI web developer. Available for projects.",
     url: "https://godbless-portfolio.vercel.app",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Godbless Uduak — AI Web Developer & Product Designer",
+    title: "Godbless Uduak, AI Web Developer & Product Designer",
     description:
       "Lagos-based product designer and AI web developer. Available for projects.",
   },

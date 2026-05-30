@@ -4,7 +4,7 @@ export const runtime = "edge";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt =
-  "Godbless Uduak — AI Web Developer & Product Designer based in Lagos.";
+  "Godbless Uduak, AI Web Developer & Product Designer based in Lagos.";
 
 export default async function Image() {
   return new ImageResponse(
@@ -63,7 +63,7 @@ export default async function Image() {
               color: "#8A8A85",
             }}
           >
-            Lagos, Nigeria — Available for projects.
+            Lagos, Nigeria, Available for projects.
           </div>
         </div>
 

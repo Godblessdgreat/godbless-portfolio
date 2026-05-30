@@ -77,7 +77,7 @@ export const EXPERIENCE = {
 
 export const WORK = {
   heading: { text: "Selected ", accent: "Work" },
-  viewAll: "(2025 — 2026)",
+  viewAll: "(2025, 2026)",
   featured: {
     slug: "space-and-time",
     tags: ["AI WEB DEV", "2025"],
@@ -132,7 +132,7 @@ export const TOOLS = {
   eyebrow: "TOOLS I USE",
   heading: { text: "The stack I ", accent: "build", tail: " with." },
   subhead:
-    "A mix of design, development, and AI tools — refined to ship faster without sacrificing craft.",
+    "A mix of design, development, and AI tools, refined to ship faster without sacrificing craft.",
   items: TOOLS_ITEMS,
 };
 
@@ -181,7 +181,7 @@ export const ABOUT = {
     "I'm a product designer and AI web developer based in Lagos. I've been designing interfaces for over two years across fintech and SaaS, and in 2026 I went all-in on building with AI tools like Lovable, Cursor, and Claude.",
     "Before design, I built a six-year track record in IT support. That knowledge still shapes how I think about systems, users, and what actually breaks in production. I also run Gee'stech, my IT services brand based in Lagos.",
     "When I'm not designing or building, I'm thinking about ways to help Nigerian creators and founders ship faster with AI.",
-    "I'm eager about AI and currently learning prompt engineering, AI systems, and how to build with the next wave of tools — through Oracle's Foundations of Artificial Intelligence programme and hands-on shipping.",
+    "I'm eager about AI and currently learning prompt engineering, AI systems, and how to build with the next wave of tools, through Oracle's Foundations of Artificial Intelligence programme and hands-on shipping.",
   ],
 } as const;
 
@@ -215,10 +215,10 @@ export const GEESTECH = {
     subhead: "Reach out. We respond fast.",
   },
   hero: {
-    eyebrow: "VENTURE · 2025 — PRESENT",
+    eyebrow: "VENTURE · 2025, PRESENT",
     headline: { lead: "Powering your ", accent: "digital", tail: " life." },
     subhead:
-      "Gee'stech is my IT services brand based in Lagos — laptop, desktop, and game console repair, sales, and maintenance for individuals, students, small businesses, and gamers.",
+      "Gee'stech is my IT services brand based in Lagos, laptop, desktop, and game console repair, sales, and maintenance for individuals, students, small businesses, and gamers.",
     ctaPrimary: "WhatsApp us",
     ctaSecondary: "Email Gee'stech",
   },
@@ -226,7 +226,7 @@ export const GEESTECH = {
     heading: "Fast-rising. Founder-led. Built for Lagos.",
     paragraphs: [
       "Gee'stech is a fast-rising tech service provider specializing in the repair, sales, and maintenance of laptops, desktops, PlayStations, and game consoles, as well as a wide range of computer accessories. We're committed to fast, reliable, and professional solutions that meet the evolving needs of our customers.",
-      "Based in Lagos, we serve a growing base of customers — from students and small business owners to corporate organizations and tech enthusiasts. Our goal: become the premier hub for technology needs within our community and beyond.",
+      "Based in Lagos, we serve a growing base of customers, from students and small business owners to corporate organizations and tech enthusiasts. Our goal: become the premier hub for technology needs within our community and beyond.",
     ],
   },
   services: {
@@ -285,11 +285,11 @@ export const GEESTECH = {
     columns: [
       {
         title: "Empowering through technology",
-        body: "Our vision is to create a world where access to technology is seamless and affordable — enabling individuals and businesses to reach their fullest potential. We aim to be more than a service provider; we aspire to be a trusted partner in driving innovation and digital growth.",
+        body: "Our vision is to create a world where access to technology is seamless and affordable, enabling individuals and businesses to reach their fullest potential. We aim to be more than a service provider; we aspire to be a trusted partner in driving innovation and digital growth.",
       },
       {
         title: "Becoming a tech hub",
-        body: "We're building Gee'stech as a center for technology — a place where repair, innovation, training, and collaboration intersect. From everyday solutions to pioneering initiatives, we want to be at the heart of technological progress in our community and beyond.",
+        body: "We're building Gee'stech as a center for technology, a place where repair, innovation, training, and collaboration intersect. From everyday solutions to pioneering initiatives, we want to be at the heart of technological progress in our community and beyond.",
       },
     ],
   },
